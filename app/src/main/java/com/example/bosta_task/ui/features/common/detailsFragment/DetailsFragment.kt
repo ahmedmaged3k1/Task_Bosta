@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
-import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -14,8 +13,6 @@ import com.example.bosta_task.databinding.FragmentDetailsBinding
 import com.example.bosta_task.ui.features.common.detailsFragment.adapters.PhotoRecyclerView
 import com.example.bosta_task.ui.features.core.HelperFunctions
 import dagger.hilt.android.AndroidEntryPoint
-import www.sanju.motiontoast.MotionToast
-import www.sanju.motiontoast.MotionToastStyle
 import java.util.Locale
 
 @AndroidEntryPoint

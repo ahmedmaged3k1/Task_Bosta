@@ -35,10 +35,6 @@ class MainNavigationFragment : Fragment() {
                     replaceFragment(HomeFragment())
                     true
                 }
-                R.id.profile->{
-                    replaceFragment(ProfileFragment())
-                    true
-                }
 
 
 
