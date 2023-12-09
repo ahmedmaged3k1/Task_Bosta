@@ -3,6 +3,17 @@ The app is composed of 2 screens, first is the profile screen, it has the user n
 
 ## ScreenShots
 <table>
+   <tr>
+    <td align="center">
+      <img src="https://github.com/ahmedmaged3k1/Task_Bosta/assets/60134186/15eaf631-4aa3-4656-a921-9d13f6374489" alt="Screenshot 4" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/ahmedmaged3k1/Task_Bosta/assets/60134186/ff134f63-ec26-4e9c-9fd3-c6711a6ac019" alt="Screenshot 5" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/ahmedmaged3k1/Task_Bosta/assets/60134186/7b3f7066-cfd2-4d1b-9278-6e9941bbcc50" alt="Screenshot 6" />
+    </td>
+  </tr>
   <tr>
     <td align="center">
       <img src="https://github.com/ahmedmaged3k1/Task_Bosta/assets/60134186/b7bd84c6-d4b4-4665-a4d7-bb5a880627d8" alt="Screenshot 1" />
@@ -14,15 +25,5 @@ The app is composed of 2 screens, first is the profile screen, it has the user n
       <img src="https://github.com/ahmedmaged3k1/Task_Bosta/assets/60134186/aa580c7c-a974-4e78-b8e1-f4c19024ba39" alt="Screenshot 3" />
     </td>
   </tr>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/ahmedmaged3k1/Task_Bosta/assets/60134186/15eaf631-4aa3-4656-a921-9d13f6374489" alt="Screenshot 4" />
-    </td>
-    <td align="center">
-      <img src="https://github.com/ahmedmaged3k1/Task_Bosta/assets/60134186/ff134f63-ec26-4e9c-9fd3-c6711a6ac019" alt="Screenshot 5" />
-    </td>
-    <td align="center">
-      <img src="https://github.com/ahmedmaged3k1/Task_Bosta/assets/60134186/7b3f7066-cfd2-4d1b-9278-6e9941bbcc50" alt="Screenshot 6" />
-    </td>
-  </tr>
+ 
 </table>
