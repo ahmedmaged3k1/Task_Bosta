@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">bionic_time</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="user_name">User Name</string>
+    <string name="profile">Profile</string>
+    <string name="user_profile_photo">User Profile Photo</string>
+    <string name="user_albums">My Albums</string>
+    <string name="bosta_logo">Bosta Logo</string>
+    <string name="album_name">Album Name</string>
+    <string name="search">Search…</string>
+
+</resources>
