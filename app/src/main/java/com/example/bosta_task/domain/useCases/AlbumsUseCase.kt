@@ -1,9 +1,7 @@
 package com.example.bionic_time.domain.useCases
 
-import android.adservices.adid.AdId
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Albums
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.User
-import com.example.bionic_time.domain.repositories.RemoteRepository
+import com.example.bosta_task.domain.repositories.RemoteRepository
 import javax.inject.Inject
 
 class AlbumsUseCase @Inject constructor(private val remoteRepositoryImp: RemoteRepository) {

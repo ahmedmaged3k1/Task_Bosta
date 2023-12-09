@@ -17,24 +17,21 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintVertical_bias="0.302" />
 
     <TextView
         android:id="@+id/textViewUserName"
         style="@style/user_names"
         android:layout_width="273dp"
         android:layout_height="68dp"
-        android:gravity="start|center"
-        android:text="@string/user_name"
         android:fontFamily="@font/inter_regulat"
+        android:gravity="start|center"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/imageViewProfile"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.512" />
-
-
+        app:layout_constraintVertical_bias="0.487" />
 
     <TextView
         android:id="@+id/textViewHeader"

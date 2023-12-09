@@ -1,7 +1,7 @@
 package com.example.bionic_time.di
 
 import com.example.bionic_time.data.dataSource.remoteDataSource.RemoteRepositoryImp
-import com.example.bionic_time.domain.repositories.RemoteRepository
+import com.example.bosta_task.domain.repositories.RemoteRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

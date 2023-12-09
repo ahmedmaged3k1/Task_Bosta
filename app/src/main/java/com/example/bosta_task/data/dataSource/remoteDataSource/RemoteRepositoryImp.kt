@@ -5,12 +5,13 @@ import android.util.Log
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Albums
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.User
-import com.example.bionic_time.domain.repositories.RemoteRepository
+import com.example.bosta_task.domain.repositories.RemoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class RemoteRepositoryImp @Inject constructor(private val apiService: ApiService) : RemoteRepository {
+class RemoteRepositoryImp @Inject constructor(private val apiService: ApiService) :
+    RemoteRepository {
     private lateinit var usersList: List<User>
     private lateinit var albumsList: List<Albums>
     private lateinit var photosList: List<Photos>

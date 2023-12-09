@@ -1,4 +1,4 @@
-package com.example.bionic_time.domain.repositories
+package com.example.bosta_task.domain.repositories
 
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Albums
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos
