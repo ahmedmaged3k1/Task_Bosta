@@ -91,20 +91,12 @@ class DetailsFragment : Fragment() {
         if (filteredList.isEmpty()) {
 
 
-            MotionToast.darkToast(
-                requireActivity(),
-                duration = MotionToast.SHORT_DURATION,
-                position = MotionToast.GRAVITY_BOTTOM,
-                font = ResourcesCompat.getFont(
-                    requireContext(),
-                    www.sanju.motiontoast.R.font.helvetica_regular
-                ),
-                style = MotionToastStyle.WARNING,
-                message = "No Data Found",
-                title = "Sorry"
-            )
+
+            albumPhotosRecyclerViewAdapter.submitList(filteredList)
         } else {
             albumPhotosRecyclerViewAdapter.submitList(filteredList)
+
+
             binding.recyclerViewAlbums.adapter = albumPhotosRecyclerViewAdapter
         }
     }

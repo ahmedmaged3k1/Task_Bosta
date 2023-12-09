@@ -1,6 +1,6 @@
 package com.example.bosta_task.di
 
-import com.example.bionic_time.data.dataSource.remoteDataSource.ApiService
+import com.example.bosta_task.data.dataSource.remoteDataSource.ApiService
 import com.example.bionic_time.data.network.Credentials
 import com.example.bosta_task.domain.repositories.RemoteRepository
 import com.example.bionic_time.domain.useCases.AlbumsUseCase

@@ -43,8 +43,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
                 android:text="@{photo.title}"
-
-                android:textSize="16sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
 

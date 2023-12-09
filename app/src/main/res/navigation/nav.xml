@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_mainNavigationFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_mainNavigationFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -34,6 +37,9 @@
         <argument
             android:name="albumsId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailsFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -43,5 +49,13 @@
         <action
             android:id="@+id/action_homeFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.bosta_task.ui.features.common.imageFragment.ImageFragment"
+        android:label="ImageFragment" >
+        <argument
+            android:name="imageLink"
+            app:argType="string" />
     </fragment>
 </navigation>

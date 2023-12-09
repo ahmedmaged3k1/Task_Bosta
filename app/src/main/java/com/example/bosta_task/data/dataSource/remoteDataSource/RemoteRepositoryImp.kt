@@ -5,6 +5,7 @@ import android.util.Log
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Albums
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.User
+import com.example.bosta_task.data.dataSource.remoteDataSource.ApiService
 import com.example.bosta_task.domain.repositories.RemoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

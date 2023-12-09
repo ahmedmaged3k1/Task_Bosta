@@ -1,4 +1,4 @@
-package com.example.bionic_time.data.dataSource.remoteDataSource
+package com.example.bosta_task.data.dataSource.remoteDataSource
 
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Albums
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos

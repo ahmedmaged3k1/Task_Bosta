@@ -2,11 +2,14 @@ package com.example.bosta_task.ui.features.common.detailsFragment.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos
 import com.example.bosta_task.databinding.PhotoItemHolderBinding
+import com.example.bosta_task.ui.features.common.detailsFragment.DetailsFragmentDirections
+import com.example.bosta_task.ui.features.common.mainNavigationFragment.MainNavigationFragmentDirections
 
 
 val diffCallbackPhoto = object : DiffUtil.ItemCallback<Photos>() {
@@ -32,7 +35,11 @@ class PhotoRecyclerView :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(photos: Photos) {
             binding.photo = photos
-            binding
+            binding.imageViewAlbum.setOnClickListener {
+                val action = DetailsFragmentDirections.actionDetailsFragmentToImageFragment(photos.url)
+                binding.root.findNavController().navigate(action)
+
+            }
         }
 
         init {

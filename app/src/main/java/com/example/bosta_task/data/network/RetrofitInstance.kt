@@ -1,6 +1,6 @@
 package com.example.bionic_time.data.network
 
-import com.example.bionic_time.data.dataSource.remoteDataSource.ApiService
+import com.example.bosta_task.data.dataSource.remoteDataSource.ApiService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
