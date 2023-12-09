@@ -22,8 +22,8 @@
     <TextView
         android:id="@+id/textViewUserName"
         style="@style/user_names"
-        android:layout_width="273dp"
-        android:layout_height="68dp"
+        android:layout_width="292dp"
+        android:layout_height="31dp"
         android:fontFamily="@font/inter_regulat"
         android:gravity="start|center"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -31,7 +31,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.487" />
+        app:layout_constraintVertical_bias="0.166" />
+
+    <TextView
+        android:id="@+id/textViewUserAddress"
+        style="@style/user_names"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:fontFamily="@font/inter_regulat"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewProfile"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.812" />
+
 
     <TextView
         android:id="@+id/textViewHeader"
@@ -65,15 +80,43 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:layout_constraintVertical_bias="0.909" />
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="387dp"
+        android:layout_height="385dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Content to apply shimmer effect to -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:orientation="vertical">
+
+            <!-- Place your views here -->
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAlbums"
+        android:visibility="invisible"
         android:layout_width="385dp"
         android:layout_height="425dp"
         tools:listitem="@layout/albums_item_holder"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
         android:background="@android:color/transparent"
-        app:spanCount="2"
+        app:spanCount="1"
         android:clipToPadding="false"
         android:paddingBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"

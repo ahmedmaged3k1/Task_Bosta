@@ -9,10 +9,11 @@
 
     <!-- RecyclerView -->
 
-    <EditText
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/editTextSearch"
         android:layout_width="341dp"
         android:layout_height="76dp"
+        android:elevation="15dp"
         android:autofillHints="name"
         android:background="@drawable/rounded_search_style"
         android:hint="@string/search"
@@ -28,15 +29,47 @@
         app:layout_constraintTop_toTopOf="@+id/guideline6"
         app:layout_constraintVertical_bias="0.444" />
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="378dp"
+        android:layout_height="611dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewAlbums"
+        app:layout_constraintTop_toTopOf="@+id/guideline8">
+
+        <!-- Content to apply shimmer effect to -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAlbums"
         android:layout_width="390dp"
-
         android:layout_height="600dp"
         android:background="@android:color/transparent"
         android:clipToPadding="false"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:paddingBottom="16dp"
+        android:visibility="invisible"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +78,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8"
         app:layout_constraintVertical_bias="0.705"
         app:spanCount="2"
-        tools:listitem="@layout/albums_item_holder" />
+        tools:listitem="@layout/photo_item_holder" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"

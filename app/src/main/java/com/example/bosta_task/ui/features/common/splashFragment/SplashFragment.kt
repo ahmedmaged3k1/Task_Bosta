@@ -48,8 +48,10 @@ class SplashFragment : Fragment() {
             }
 
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
+
                 view?.findNavController()
                     ?.navigate(R.id.action_splashFragment_to_mainNavigationFragment)
+
 
             }
 

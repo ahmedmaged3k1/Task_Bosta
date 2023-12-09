@@ -10,6 +10,8 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:8.1.2" // Use the latest version
         classpath "com.google.dagger:hilt-android-gradle-plugin:2.44" // Use the latest version
+        def nav_version = "2.7.5"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     }
 }
 plugins {
@@ -18,6 +20,7 @@ plugins {
     id 'com.android.application' version '8.1.2' apply false
     id 'org.jetbrains.kotlin.android' version '1.9.21' apply false
     id 'com.google.dagger.hilt.android' version '2.48' apply false
+
 
 
 }

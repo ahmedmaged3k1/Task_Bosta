@@ -9,5 +9,7 @@
     <string name="bosta_logo">Bosta Logo</string>
     <string name="album_name">Album Name</string>
     <string name="search">Search…</string>
+    <string name="user_address">%1$s , %2$s ,  %3$s</string>
+    <string name="image">image</string>
 
 </resources>

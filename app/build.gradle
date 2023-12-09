@@ -3,7 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id 'androidx.navigation.safeargs'
+
 }
+
 
 android {
     namespace 'com.example.bosta_task'
@@ -65,6 +68,9 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
     //Motion Toast
     implementation 'com.github.Spikeysanju:MotionToast:1.4'
+    //Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
 
 
 }

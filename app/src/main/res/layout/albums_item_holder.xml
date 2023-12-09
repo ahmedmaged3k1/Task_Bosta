@@ -1,50 +1,31 @@
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     >
     <data>
         <variable
-            name="user"
-            type="com.example.bionic_time.data.dataSource.remoteDataSource.entities.User" />
+            name="albums"
+            type="com.example.bionic_time.data.dataSource.remoteDataSource.entities.Albums" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="200dp"
-        android:layout_height="215dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
 
         >
-        <!-- item_album.xml -->
-        <LinearLayout
+
+        <TextView
+            android:id="@+id/textViewAlbumName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
+            android:layout_height="match_parent"
+            android:text="@{albums.title}"
+            android:gravity="center"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <!-- Album Picture -->
-            <ImageView
-                android:id="@+id/imageViewAlbum"
-                android:contentDescription="@string/user_albums"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/baseline_photo_album_24"
-
-                />
-
-            <!-- Album Name -->
-            <TextView
-                android:id="@+id/textViewAlbumName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@{user.username}"
-
-                android:textSize="16sp" />
-        </LinearLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

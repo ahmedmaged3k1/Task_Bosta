@@ -2,22 +2,24 @@ package com.example.bosta_task.ui.features.common.homeFragment.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.User
+import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Albums
 import com.example.bosta_task.databinding.AlbumsItemHolderBinding
+import com.example.bosta_task.ui.features.common.mainNavigationFragment.MainNavigationFragmentDirections
 
-val diffCallbackAd = object : DiffUtil.ItemCallback<User>() {
-    override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+val diffCallbackAlbum = object : DiffUtil.ItemCallback<Albums>() {
+    override fun areItemsTheSame(oldItem: Albums, newItem: Albums): Boolean {
         return oldItem == newItem
     }
-    override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
+    override fun areContentsTheSame(oldItem: Albums, newItem: Albums): Boolean {
         return oldItem.id == newItem.id
     }
 }
-class UserAlbumRecyclerView :
-    ListAdapter<User, UserAlbumRecyclerView.AlbumsViewHolder>(diffCallbackAd) {
+class UserAlbumRecyclerView () :
+    ListAdapter<Albums, UserAlbumRecyclerView.AlbumsViewHolder>(diffCallbackAlbum) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumsViewHolder {
         return from(parent)
     }
@@ -29,8 +31,13 @@ class UserAlbumRecyclerView :
 
     inner class AlbumsViewHolder constructor(private val binding: AlbumsItemHolderBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(user: User) {
-            binding.user = user
+        fun bind(albums: Albums) {
+            binding.albums = albums
+            binding.textViewAlbumName.setOnClickListener {
+                val action = MainNavigationFragmentDirections.actionMainNavigationFragmentToDetailsFragment(albums.id)
+                binding.root.findNavController().navigate(action)
+
+            }
 
         }
 

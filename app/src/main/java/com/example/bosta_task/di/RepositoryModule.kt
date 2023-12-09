@@ -1,4 +1,4 @@
-package com.example.bionic_time.di
+package com.example.bosta_task.di
 
 import com.example.bionic_time.data.dataSource.remoteDataSource.RemoteRepositoryImp
 import com.example.bosta_task.domain.repositories.RemoteRepository

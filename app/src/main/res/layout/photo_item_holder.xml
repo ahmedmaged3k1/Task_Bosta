@@ -1,0 +1,54 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <data>
+        <variable
+            name="photo"
+            type="com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+
+        >
+        <!-- item_album.xml -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Album Picture -->
+            <ImageView
+                android:id="@+id/imageViewAlbum"
+                android:contentDescription="@string/user_albums"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_photo_album_24"
+                app:photoThumbnail="@{photo}"
+
+                />
+
+            <!-- Album Name -->
+            <TextView
+                android:id="@+id/textViewAlbumName"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:text="@{photo.title}"
+
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
