@@ -6,10 +6,9 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos
+import com.example.bosta_task.data.dataSource.remoteDataSource.entities.Photos
 import com.example.bosta_task.databinding.PhotoItemHolderBinding
 import com.example.bosta_task.ui.features.common.detailsFragment.DetailsFragmentDirections
-import com.example.bosta_task.ui.features.common.mainNavigationFragment.MainNavigationFragmentDirections
 
 
 val diffCallbackPhoto = object : DiffUtil.ItemCallback<Photos>() {
@@ -42,13 +41,11 @@ class PhotoRecyclerView :
             }
         }
 
-        init {
 
-        }
 
     }
 
-    fun from(parent: ViewGroup): PhotosViewHolder {
+    private fun from(parent: ViewGroup): PhotosViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = PhotoItemHolderBinding.inflate(inflater, parent, false)
         return PhotosViewHolder(binding)

@@ -1,5 +1,6 @@
 package com.example.bosta_task.ui.features.common.imageFragment
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -116,7 +117,7 @@ class ImageFragment : Fragment() {
                 try {
                     val uri = downloadImageAndShare()
                     withContext(Dispatchers.Main) {
-                        shareImagee(uri)
+                        shareImageIntent(uri)
                     }
                 } catch (e: Exception) {
                     e.printStackTrace()
@@ -142,13 +143,14 @@ class ImageFragment : Fragment() {
         )
     }
 
-    private fun shareImagee(uri: Uri) {
+    private fun shareImageIntent(uri: Uri) {
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.putExtra(Intent.EXTRA_STREAM, uri)
         shareIntent.type = "image/png"
         startActivity(Intent.createChooser(shareIntent, "Share Image"))
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun zoom() {
         binding.imageView.setOnTouchListener { _, event ->
             scaleGestureDetector.onTouchEvent(event)
@@ -159,7 +161,7 @@ class ImageFragment : Fragment() {
     private inner class ScaleListener : ScaleGestureDetector.SimpleOnScaleGestureListener() {
         override fun onScale(detector: ScaleGestureDetector): Boolean {
             scaleFactor *= detector.scaleFactor
-            scaleFactor = Math.max(0.1f, Math.min(scaleFactor, 5.0f))
+            scaleFactor = 0.1f.coerceAtLeast(scaleFactor.coerceAtMost(5.0f))
 
             binding.imageView.scaleX = scaleFactor
             binding.imageView.scaleY = scaleFactor

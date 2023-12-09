@@ -8,7 +8,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos
+import com.example.bosta_task.data.dataSource.remoteDataSource.entities.Photos
 import com.example.bosta_task.databinding.FragmentDetailsBinding
 import com.example.bosta_task.ui.features.common.detailsFragment.adapters.PhotoRecyclerView
 import com.example.bosta_task.ui.features.core.HelperFunctions

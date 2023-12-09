@@ -6,7 +6,7 @@
     <data>
         <variable
             name="photo"
-            type="com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos" />
+            type="com.example.bosta_task.data.dataSource.remoteDataSource.entities.Photos" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

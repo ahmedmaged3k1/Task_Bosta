@@ -3,8 +3,8 @@ package com.example.bosta_task.di
 import com.example.bosta_task.data.dataSource.remoteDataSource.ApiService
 import com.example.bionic_time.data.network.Credentials
 import com.example.bosta_task.domain.repositories.RemoteRepository
-import com.example.bionic_time.domain.useCases.AlbumsUseCase
-import com.example.bionic_time.domain.useCases.PhotosUseCase
+import com.example.bosta_task.domain.useCases.AlbumsUseCase
+import com.example.bosta_task.domain.useCases.PhotosUseCase
 import com.example.bosta_task.domain.useCases.UserUseCase
 import dagger.Module
 import dagger.Provides

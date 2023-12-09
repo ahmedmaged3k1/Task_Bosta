@@ -1,8 +1,8 @@
 package com.example.bosta_task.domain.repositories
 
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Albums
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.User
+import com.example.bosta_task.data.dataSource.remoteDataSource.entities.Albums
+import com.example.bosta_task.data.dataSource.remoteDataSource.entities.Photos
+import com.example.bosta_task.data.dataSource.remoteDataSource.entities.User
 import retrofit2.http.Body
 
 interface RemoteRepository {

@@ -1,14 +1,13 @@
 package com.example.bosta_task.ui.features.common.mainNavigationFragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.bosta_task.ui.features.common.homeFragment.HomeFragment
-import com.example.bosta_task.ui.features.common.profileFragment.ProfileFragment
+import androidx.fragment.app.Fragment
 import com.example.bosta_task.R
 import com.example.bosta_task.databinding.FragmentMainNavigationBinding
+import com.example.bosta_task.ui.features.common.homeFragment.HomeFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,18 +26,15 @@ class MainNavigationFragment : Fragment() {
 
         return binding.root
     }
-    private fun  navigationSelector(){
-        binding.bottomNavigationView.setOnItemSelectedListener {
-            when(it.itemId){
 
-                R.id.home->{
+    private fun navigationSelector() {
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+
+                R.id.home -> {
                     replaceFragment(HomeFragment())
                     true
                 }
-
-
-
-
                 else -> {
                     false
                 }
@@ -47,11 +43,11 @@ class MainNavigationFragment : Fragment() {
         }
 
     }
-    private fun replaceFragment(fragment: Fragment)
-    {
+
+    private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = activity?.supportFragmentManager
-        val fragmentTransaction =fragmentManager?.beginTransaction()
-        fragmentTransaction?.replace(R.id.frameLayout,fragment)
+        val fragmentTransaction = fragmentManager?.beginTransaction()
+        fragmentTransaction?.replace(R.id.frameLayout, fragment)
         fragmentTransaction?.commit()
 
     }

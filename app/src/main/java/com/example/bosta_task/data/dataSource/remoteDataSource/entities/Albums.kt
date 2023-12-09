@@ -1,4 +1,4 @@
-package com.example.bionic_time.data.dataSource.remoteDataSource.entities
+package com.example.bosta_task.data.dataSource.remoteDataSource.entities
 
 import com.google.gson.annotations.SerializedName
 

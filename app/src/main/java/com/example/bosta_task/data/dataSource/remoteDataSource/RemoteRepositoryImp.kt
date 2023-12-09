@@ -1,11 +1,10 @@
-package com.example.bionic_time.data.dataSource.remoteDataSource
+package com.example.bosta_task.data.dataSource.remoteDataSource
 
 import android.content.ContentValues
 import android.util.Log
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Albums
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.Photos
-import com.example.bionic_time.data.dataSource.remoteDataSource.entities.User
-import com.example.bosta_task.data.dataSource.remoteDataSource.ApiService
+import com.example.bosta_task.data.dataSource.remoteDataSource.entities.Albums
+import com.example.bosta_task.data.dataSource.remoteDataSource.entities.Photos
+import com.example.bosta_task.data.dataSource.remoteDataSource.entities.User
 import com.example.bosta_task.domain.repositories.RemoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -22,7 +21,7 @@ class RemoteRepositoryImp @Inject constructor(private val apiService: ApiService
             try {
                 val response = apiService.getUsers().body() ?: listOf()
                 usersList = response
-                Log.d(ContentValues.TAG, "getAllUsers: success ${usersList.toString()}")
+                Log.d(ContentValues.TAG, "getAllUsers: success $usersList")
 
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -37,11 +36,9 @@ class RemoteRepositoryImp @Inject constructor(private val apiService: ApiService
             try {
                 val response = apiService.getUserAlbum(userId).body() ?: listOf()
                 albumsList = response
-                Log.d(ContentValues.TAG, "getAllAlbums: success ${albumsList.toString()}")
 
             } catch (e: Exception) {
                 e.printStackTrace()
-                Log.d(ContentValues.TAG, "getAllAlbums:  error ")
             }
         }
         return albumsList
@@ -53,11 +50,10 @@ class RemoteRepositoryImp @Inject constructor(private val apiService: ApiService
             try {
                 val response = apiService.getUserPhotos(albumId).body() ?: listOf()
                 photosList = response
-                Log.d(ContentValues.TAG, "getAllAllPhotos: success ${photosList.toString()}")
+
 
             } catch (e: Exception) {
                 e.printStackTrace()
-                Log.d(ContentValues.TAG, "getAllAllPhotos:  error ")
             }
         }
         return photosList
